@@ -1,0 +1,37 @@
+:root {
+    color-scheme: light dark;
+
+  /* Monochromatic Palette */
+  --forest-dark: #001a0a;
+  --forest-mid: #0a5c2e;
+  --forest-light: #3d8060;
+  --forest-pale: #e1fff1;
+  /* Accent Color (Complementary Coral) */
+  --accent-coral: #db5a1a;
+
+  /* Default (Dark Theme) */
+  --dark-bg-primary: var(--forest-dark); 
+  --dark-bg-secundary: var(--forest-deep); 
+  --dark-color-primary: var(--forest-pale); 
+  --dark-color-secondary: #b3d1c5;
+  --dark-border: rgba(140, 179, 160, 0.15);
+
+  --light-bg-primary: var(--forest-pale);
+  --light-bg-secundary: var(--forest-pale); 
+  --light-color-primary: var(--forest-dark); 
+  --light-color-secondary: var(--forest-deep); 
+  --light-border: rgba(0, 52, 19, 0.1);
+
+  --color-accent: var(--accent-coral); 
+
+  --bg-primary: light-dark(var(--light-bg-primary), var(--dark-bg-primary))
+  --bg-secundary: light-dark(var(--light-bg-secundary), var(--dark-bg-secundary))
+  --color-primary: light-dark(var(--light-color-primary), var(--dark-color-primary))
+  --color-secondary: light-dark(var(--light-color-secondary), var(--dark-color-secondary))
+  --border: light-dark(var(--light-border), var(--dark-border))
+
+  /* Common Styles */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --transition: all 0.3s ease;
+}
