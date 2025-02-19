@@ -1,0 +1,28 @@
+@import "vars";
+
+.about {
+  font-family: $font-family;
+  padding: 8rem 0;
+  &__title {
+    position: relative;
+    overflow-wrap: break-word;
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    max-width: 50%;
+  }
+  &__text {
+    line-height: 30px;
+    position: relative;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    width: 50rem;
+    max-width: 70%;
+  }
+  &__image {
+    z-index: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 35rem;
+  }
+}

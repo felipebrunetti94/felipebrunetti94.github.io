@@ -1,0 +1,142 @@
+---
+title: "Fantastic Streams and where to find them"
+date: "2025-02-18"
+slug: "streams-and-where-to-find-them"
+tags: 
+- NodeJS
+- Javascript
+---
+
+## What is a stream?
+
+According to [Wikipedia](<https://en.wikipedia.org/wiki/Stream_(computing)>):
+
+> In computer science, a stream is a sequence of potentially unlimited data elements made available over time.
+
+Or as popularly quoted, “streams are arrays over time.”
+
+## Why?
+
+Let's say you want to read a very big file let's say thousands of lines of JSON objects, unless you have a LOT of memory you can't load everything in memory.
+
+### Without streams
+
+Depending on your memory size and file size let's just say you're gonna have a hard time.
+
+![Your program's memory on excessively large data](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/eje4t7pp779dkzpipp7j.png)
+
+### With Streams
+
+With Streams you can break down the file into chunks, small parts of information and process then one by one. This way we don't overwhelm our memory and can take on very big files.
+
+![Chunks entering your memory to be proccessed](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/rke19afp3gjgvpdi73ab.png)
+
+Some common use cases are:
+
+- handling multimedia
+- reading and writing large files
+- compression and decompression
+- encryption
+- networking
+
+If you use the fetch API you already use streams, you may have done something like this.
+
+```js
+const response = await fetch(url);
+const { body } = response;
+const parsed = await body.json();
+```
+
+This `body` property is a Readable Stream, more on this later, of bits.
+
+```js
+const { body } = response;
+```
+
+The `.json()` method will wait for the response to end and then parse the whole response.
+
+```js
+const parsed = await body.json();
+x;
+```
+
+But if you're expecting a very big response or just want a more seamsless response to the user, we can use streams and start processing the data chunk by chunk.
+Now if you're convinced or not... let's dive deeper into streams concepts.
+
+Just an observation, NodeJS Streams are different from their WEB Standard cousin, I'll try to explain their differente in this post.
+
+## Concepts
+
+There are 2 Types of streams Readable and Writable and the combination of both the Transform Stream on the Web or Duplex in NodeJS
+
+### Types of Streams
+
+#### Readable
+
+It's the input equivalent of streams. Some examples of ReadableStreams in the wild is the response.body in our previous example and http.IncomingMessage in NodeJS
+
+```js
+import http from "node:http";
+const server = http.createServer();
+server.on("request", (request, response) => {
+  request.on("data", (chunk) => handleChunk(chunk));
+});
+```
+
+#### Writable
+
+It's the output equivalent of streams. Some examples of WritableStreams in the wild is the response object in the http module
+
+```js
+import http from "node:http";
+const server = http.createServer((request, response) => {
+  request.on("data", (chunk) => readChunk(chunk));
+});
+```
+
+#### Transform
+
+The combinatino of both
+In NodeJS we call them Duplex, some examples of Transform streams in the wild is the Socket class in the net module:
+
+```js
+import http from "node:http";
+const server = http.createServer((request, response) => {
+  response.write("<h1>Fantastic Streams and Where To Find Them</h1>");
+});
+```
+
+### Chunks
+
+The unit of data in the stream, in a network it wil be a bit but you can create streams for bigger data.
+
+### Teeing
+
+The habilit to create a duplicate of a stream, theres no native teeing in node streams.
+
+![Teeing aka cloning your read stream](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/uli7qabcpgebnfg7k0k2.png)
+
+### Pipe Chains
+
+The habilit to chain streams into one another, very usefull to change read streams before writing.
+
+## Show me the code
+
+You can check the final code [here](https://github.com/felipebrunetti94/streams-and-where-they-live)
+Okay we will apply all this concepts by creating a small app that will read a very large file and display the result chunk by chunk on html.
+
+Let's first assume we have a very big file consisting of multiple json entries of
+
+```json
+{ "id": "1", "timestamp": "2025-02-13T13:56:41.420Z", "value": "355.66" }
+```
+
+I've also set up a vanilla node server, serve a html from get '/'
+
+## Recap
+
+If you could leave this post with a few points, use streams when you want to:
+
+- optimize memory usage
+- process large datasets
+- realtime data processing
