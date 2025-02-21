@@ -4,7 +4,7 @@ import DarkClouds from "../assets/dark-clouds.svg";
 import Clouds from "../assets/clouds.svg";
 
 const Background = ({ children }) => (
-  <div style={{ zIndex: 0 }}>
+  <div>
     <Sky />
     <DarkClouds className="dark-clouds" />
     <Clouds className="clouds" />
