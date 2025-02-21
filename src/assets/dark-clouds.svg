@@ -7,7 +7,7 @@
    viewBox="0 0 210 297"
    version="1.1"
    id="svg1"
-   sodipodi:docname="test1.svg"
+   sodipodi:docname="dark-clouds.svg"
    inkscape:version="1.4 (e7c3feb1, 2024-10-09)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -25,7 +25,7 @@
      inkscape:document-units="mm"
      inkscape:zoom="0.44387846"
      inkscape:cx="264.7121"
-     inkscape:cy="619.53896"
+     inkscape:cy="820.04429"
      inkscape:window-width="1512"
      inkscape:window-height="829"
      inkscape:window-x="0"
@@ -40,7 +40,7 @@
      id="layer1">
     <path
        id="path4"
-       style="fill:#000000;fill-opacity:1;stroke-width:0.264583"
+       style="fill:#00052a;fill-opacity:1.0;stroke-width:0.264583"
        d="M 186.57052 248.56157 A 42.321079 33.081974 0 0 0 146.31355 271.96635 A 38.148579 24.438932 0 0 0 117.42591 263.46351 A 38.148579 24.438932 0 0 0 82.172245 278.91579 A 19.372326 20.564468 0 0 0 65.865747 269.42438 A 19.372326 20.564468 0 0 0 56.248246 272.14876 A 34.572151 25.333042 0 0 0 23.246643 253.92662 A 34.572151 25.333042 0 0 0 -11.325407 279.25944 A 34.572151 25.333042 0 0 0 23.246643 304.59278 A 34.572151 25.333042 0 0 0 47.770211 296.89092 A 19.372326 20.564468 0 0 0 65.865747 310.55314 A 19.372326 20.564468 0 0 0 83.34375 298.80037 A 38.148579 24.438932 0 0 0 117.42591 312.34166 A 38.148579 24.438932 0 0 0 150.94117 299.37914 A 42.321079 33.081974 0 0 0 186.57052 314.72601 A 42.321079 33.081974 0 0 0 228.89146 281.64379 A 42.321079 33.081974 0 0 0 186.57052 248.56157 z " />
   </g>
 </svg>

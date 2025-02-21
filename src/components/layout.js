@@ -21,7 +21,7 @@ const Layout = ({ children }) => {
         </header>
         <div className="content">{children}</div>
         <footer className="footer">
-          coded, designed and written by Felipe Brunetti
+          👷🏼‍♂️ Coding, designing and writting by Felipe Brunetti
           <div>
             <a
               href="https://www.linkedin.com/in/felipe-brunetti/"

@@ -1,9 +1,13 @@
 import * as React from "react";
 import Sky from "./sky";
+import DarkClouds from "../assets/dark-clouds.svg";
+import Clouds from "../assets/clouds.svg";
 
 const Background = ({ children }) => (
-  <div className="main-container">
+  <div style={{ zIndex: 0 }}>
     <Sky />
+    <DarkClouds className="dark-clouds" />
+    <Clouds className="clouds" />
     {children}
   </div>
 );

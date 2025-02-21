@@ -4,6 +4,8 @@
   font-family: $font-family;
   padding: 8rem 0;
   &__title {
+    z-index: 2;
+    border: 1px solid red;
     position: relative;
     overflow-wrap: break-word;
     font-size: 4rem;
@@ -11,6 +13,8 @@
     max-width: 50%;
   }
   &__text {
+    z-index: 2;
+    border: 1px solid red;
     line-height: 30px;
     position: relative;
     font-size: 1.25rem;
@@ -19,10 +23,25 @@
     max-width: 70%;
   }
   &__image {
-    z-index: 0;
     position: absolute;
     right: 0;
     top: 0;
     max-width: 35rem;
   }
+}
+
+.dark-clouds {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: auto;
+}
+
+.clouds {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: auto;
+  opacity: 0.9;
 }
