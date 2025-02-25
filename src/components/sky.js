@@ -39,9 +39,8 @@ const Sky = () => {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    // Create stars
     const createStars = () => {
-      const numberOfStars = 10000;
+      const numberOfStars = (window.innerWidth * window.innerHeight) / 500;
       stars.current = Array.from(
         { length: numberOfStars },
         () => new Star({ ctx, canvas })
@@ -51,7 +50,7 @@ const Sky = () => {
     if (!animationFrameId.current) {
       createStars();
     }
-    // Set canvas size
+
     const updateCanvasSize = () => {
       const dpr = window.devicePixelRatio || 1;
       canvas.width = window.innerWidth * dpr;
@@ -61,7 +60,6 @@ const Sky = () => {
       canvas.style.height = `${window.innerHeight}px`;
     };
 
-    // Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       stars.current.forEach((star) => {
@@ -72,11 +70,9 @@ const Sky = () => {
       animationFrameId.current = requestAnimationFrame(animate);
     };
 
-    // Initial setup
     updateCanvasSize();
     animate();
 
-    // Event listeners
     const handleResize = () => {
       updateCanvasSize();
       createStars();
@@ -84,7 +80,6 @@ const Sky = () => {
 
     window.addEventListener("resize", handleResize);
 
-    // Cleanup
     return () => {
       window.removeEventListener("resize", handleResize);
       if (animationFrameId.current) {
@@ -104,9 +99,9 @@ const Sky = () => {
         height: "auto",
         background: `linear-gradient(
           to bottom,
-          #000428,
+          #000428, 80%,
           #004e92
-        )` /* Night sky gradient */,
+        )`,
       }}
     />
   );
