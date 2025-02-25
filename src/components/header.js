@@ -6,13 +6,13 @@ const Header = () => (
     <div className="header__home">
       <Link to="/">Felipe Brunetti</Link>
     </div>
-    <nav>
+    {/* <nav>
       <ul>
         <li>
           <Link to="/blog">Blog</Link>
         </li>
       </ul>
-    </nav>
+    </nav> */}
   </header>
 );
 
