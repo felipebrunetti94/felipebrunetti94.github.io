@@ -7,7 +7,7 @@ const About = () => (
   <section className="about">
     <div className="about__image">
       <StaticImage
-        alt="Clifford, a reddish-brown pitbull, posing on a couch and looking stoically at the camera"
+        alt="Felipe's profile picture"
         src="../images/profile-pic-1.png"
       />
     </div>
