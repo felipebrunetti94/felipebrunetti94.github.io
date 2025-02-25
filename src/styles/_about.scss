@@ -5,27 +5,31 @@
   position: relative;
   padding-top: 15vh;
 
-  font-family: $font-family;
-
   &__title {
-    border: 1px solid white;
-    position: relative;
     overflow-wrap: break-word;
     font-size: 4rem;
     margin-bottom: 3rem;
-    padding-left: 20vw;
   }
 
   &__text {
-    border: 1px solid white;
     z-index: 2;
-    line-height: 30px;
     position: relative;
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-    width: 50rem;
+    margin-left: 20vw;
+    height: fit-content;
+    a {
+      color: $color-primary;
+      text-decoration: underline;
+      text-decoration-thickness: 0.2rem;
+    }
+    b {
+      color: $color-primary;
+    }
 
-    padding-left: 20vw;
+    p {
+      font-size: 1.25rem;
+      line-height: 30px;
+      margin-bottom: 1rem;
+    }
   }
 
   &__image {
@@ -34,6 +38,7 @@
     right: 20vw;
     bottom: 0;
     max-width: 30rem;
+    transform: translate(15%);
   }
 }
 
@@ -58,4 +63,90 @@
   width: 100vw;
   height: auto;
   opacity: 0.95;
+}
+
+@media all and (min-width: 1024px) {
+  .about {
+    &__title {
+    }
+
+    &__text {
+      height: 100%;
+      width: 35%;
+      top: 0;
+
+      padding-top: 10rem;
+    }
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+}
+
+@media all and (max-width: 480px) {
+}
+
+/* Portrait */
+@media screen and (orientation: portrait) {
+  /* Portrait styles here */
+}
+/* Landscape */
+@media screen and (orientation: landscape) {
+  /* Landscape styles here */
+}
+
+/* CSS for iPhone, iPad, and Retina Displays */
+
+/* Non-Retina */
+@media screen and (-webkit-max-device-pixel-ratio: 1) {
+}
+
+/* Retina */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (-o-min-device-pixel-ratio: 3/2),
+  only screen and (min--moz-device-pixel-ratio: 1.5),
+  only screen and (min-device-pixel-ratio: 1.5) {
+}
+
+/* iPhone Portrait */
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+}
+
+/* iPhone Landscape */
+@media screen and (max-device-width: 480px) and (orientation: landscape) {
+}
+
+.wave {
+  animation-name: wave-animation;
+  animation-duration: 0.75s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+.wave:hover {
+  animation-play-state: running;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(12deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.card {
 }

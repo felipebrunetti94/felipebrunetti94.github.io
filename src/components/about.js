@@ -11,15 +11,25 @@ const About = () => (
         src="../images/profile-pic-1.png"
       />
     </div>
-    <h1 className="about__title">Hello there!👋🏼 I'm Felipe.</h1>
-    <p className="about__text">
-      I'm software engineering building end to end applications with 9+ years of
-      experience.
-    </p>
-    <p className="about__text">
-      I’m eager reader and love to share knowledge either by mentoring or
-      learning with my pears
-    </p>
+    <div className="about__text">
+      <h1 className="about__title">
+        Hello!<span className="wave">👋🏼</span> I'm Felipe,
+      </h1>
+      <p>
+        A <b>software engineer</b> building full stack applications since 2016.
+      </p>
+      <p>
+        I've worked with a range of tech stacks{" "}
+        <b>(Dart, C#, Ruby and NodeJS 🖤 )</b> and enviroments ranging from go
+        horse driven development startups, to everything needs a ticket
+        corporate.
+      </p>
+      <p>
+        Besides work I like to read, practice sports (any kind that takes me
+        outside haha), petting my cats and playing piano.
+      </p>
+    </div>
+
     <DarkClouds className="dark-clouds" />
     <Clouds className="clouds" />
   </section>
