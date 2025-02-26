@@ -21,9 +21,7 @@
       text-decoration: underline;
       text-decoration-thickness: 0.2rem;
     }
-    b {
-      color: $color-primary;
-    }
+
 
     p {
       font-size: 1.25rem;
@@ -40,13 +38,6 @@
     max-width: 30rem;
     transform: translate(15%);
   }
-}
-
-.upsidedown {
-  position: absolute;
-  top: 0;
-  width: 100vw;
-  height: fit-content;
 }
 
 .dark-clouds {

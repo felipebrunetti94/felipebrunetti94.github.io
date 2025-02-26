@@ -6,7 +6,7 @@ const Work = () => {
   return (
     <section className="work">
       <Card className="resume">
-        <h6>Experience</h6>
+        <h6>Experiences</h6>
         {resume.map((xp) => (
           <Experience {...xp} />
         ))}
