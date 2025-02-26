@@ -14,7 +14,7 @@ const Work = () => {
 
       <Card>
         <p>
-          I've worked with a range of tech stacks including
+          I've worked with a range of tech stacks including{" "}
           <b>Dart, C#, Ruby and NodeJS 🖤 </b> and enviroments ranging from go
           horse driven development startups, to everything needs a ticket
           corporate.
