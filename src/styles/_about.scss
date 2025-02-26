@@ -1,6 +1,7 @@
 @import "vars";
 
 .about {
+  overflow: clip;
   height: 70vh;
   position: relative;
   padding-top: 15vh;
@@ -21,7 +22,6 @@
       text-decoration: underline;
       text-decoration-thickness: 0.2rem;
     }
-
 
     p {
       font-size: 1.25rem;
