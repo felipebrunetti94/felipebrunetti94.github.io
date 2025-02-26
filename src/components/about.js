@@ -13,16 +13,15 @@ const About = () => (
     </div>
     <div className="about__text">
       <h1 className="about__title">
-        Hello!<span className="wave">👋🏼</span> I'm Felipe,
+        Hello!<span className="wave">👋🏼</span> I'm Felipe.
       </h1>
       <p>
-        A <b>software engineer</b> building full stack applications since 2016.
+        A <b>Software Engineer</b> 9 years of experience specialized in the
+        javascript ecosystem like NodeJS, React and React Native.
       </p>
       <p>
-        I've worked with a range of tech stacks{" "}
-        <b>(Dart, C#, Ruby and NodeJS 🖤 )</b> and enviroments ranging from go
-        horse driven development startups, to everything needs a ticket
-        corporate.
+        I’m also passionate about software architecture, functional design and
+        DDD.
       </p>
       <p>
         Besides work I like to read, practice sports (any kind that takes me

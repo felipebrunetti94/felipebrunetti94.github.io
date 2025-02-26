@@ -3,7 +3,8 @@ import UpsideDownDarkClouds from "../assets/dark-clouds-upsidedown.svg";
 
 const Footer = () => (
   <footer className="footer">
-    👷🏼‍♂️ Coding, designing and writting by Felipe Brunetti
+    👷🏼‍♂️ in development by Felipe Brunetti - "I'm currently open to work if you
+    find me a good fit please contact me"
     <UpsideDownDarkClouds className="dark-clouds upsidedown" />
     <div>
       <a
