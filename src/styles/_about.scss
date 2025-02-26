@@ -45,6 +45,7 @@
   position: absolute;
   bottom: 0;
   width: 100vw;
+  min-width: 2560px;
   height: auto;
 }
 
@@ -52,15 +53,32 @@
   position: absolute;
   bottom: 0;
   width: 100vw;
+  min-width: 2560px;
   height: auto;
   opacity: 0.95;
 }
 
-@media all and (min-width: 1024px) {
+@media all and (max-width: 480px) {
   .about {
-    &__title {
+    height: 1280px;
+    &__image {
+      z-index: 0;
+
+      position: relative;
+      right: 0;
+      max-width: 25rem;
+
+      transform: translate(30%);
     }
 
+    &__text {
+      margin: 1rem;
+    }
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .about {
     &__text {
       height: 100%;
       width: 35%;
@@ -69,45 +87,6 @@
       padding-top: 10rem;
     }
   }
-}
-
-@media all and (min-width: 768px) and (max-width: 1024px) {
-}
-
-@media all and (min-width: 480px) and (max-width: 768px) {
-}
-
-@media all and (max-width: 480px) {
-}
-
-/* Portrait */
-@media screen and (orientation: portrait) {
-  /* Portrait styles here */
-}
-/* Landscape */
-@media screen and (orientation: landscape) {
-  /* Landscape styles here */
-}
-
-/* CSS for iPhone, iPad, and Retina Displays */
-
-/* Non-Retina */
-@media screen and (-webkit-max-device-pixel-ratio: 1) {
-}
-
-/* Retina */
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-  only screen and (-o-min-device-pixel-ratio: 3/2),
-  only screen and (min--moz-device-pixel-ratio: 1.5),
-  only screen and (min-device-pixel-ratio: 1.5) {
-}
-
-/* iPhone Portrait */
-@media screen and (max-device-width: 480px) and (orientation: portrait) {
-}
-
-/* iPhone Landscape */
-@media screen and (max-device-width: 480px) and (orientation: landscape) {
 }
 
 .wave {

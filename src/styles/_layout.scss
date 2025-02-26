@@ -78,6 +78,7 @@
     position: absolute;
     top: 0;
     width: 100vw;
+    min-width: 2560px;
     height: fit-content;
     z-index: 1;
   }
@@ -101,4 +102,24 @@
   height: fit-content;
   box-sizing: border-box;
   font-family: $font-family;
+}
+
+@media all and (max-width: 480px) {
+  .header {
+    padding: 1rem;
+    height: 5vh;
+    &__home {
+      width: 100%;
+    }
+  }
+
+  .footer {
+    height: 720px;
+    &__contact {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      height: 200px;
+    }
+  }
 }

@@ -68,3 +68,12 @@
   justify-content: center;
   align-items: center;
 }
+
+@media all and (max-width: 480px) {
+  .work {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+}
