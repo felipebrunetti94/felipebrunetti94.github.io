@@ -95,7 +95,7 @@ const Sky = () => {
         position: "fixed",
         top: "0",
         left: "0",
-        width: "100vw",
+        width: "100%",
         height: "auto",
         background: `linear-gradient(
           to bottom,

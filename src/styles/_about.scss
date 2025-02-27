@@ -2,9 +2,27 @@
 
 .about {
   overflow: clip;
-  height: 70vh;
+  height: 100vh;
+  width: 100%;
   position: relative;
-  padding-top: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__content {
+    height: 100%;
+    position: relative;
+    padding-top: 15vh;
+  }
+
+  &__image {
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    max-width: 30rem;
+    transform: translate(15%);
+  }
 
   &__title {
     overflow-wrap: break-word;
@@ -15,7 +33,7 @@
   &__text {
     z-index: 2;
     position: relative;
-    margin-left: 20vw;
+    margin-left: 0;
     height: fit-content;
     a {
       color: $color-primary;
@@ -29,15 +47,6 @@
       margin-bottom: 1rem;
     }
   }
-
-  &__image {
-    z-index: 1;
-    position: absolute;
-    right: 20vw;
-    bottom: 0;
-    max-width: 30rem;
-    transform: translate(15%);
-  }
 }
 
 .dark-clouds {
@@ -45,7 +54,7 @@
   position: absolute;
   bottom: 0;
   width: 100vw;
-  min-width: 2560px;
+  min-width: 1280px;
   height: auto;
 }
 
@@ -53,18 +62,26 @@
   position: absolute;
   bottom: 0;
   width: 100vw;
-  min-width: 2560px;
+  min-width: 1280px;
   height: auto;
   opacity: 0.95;
 }
 
 @media all and (max-width: 480px) {
+  .dark-clouds {
+    min-width: 2560px;
+  }
+
+  .clouds {
+    min-width: 2560px;
+  }
   .about {
     height: 1280px;
     &__image {
       z-index: 0;
 
       position: relative;
+      top: 100px;
       right: 0;
       max-width: 25rem;
 
@@ -77,14 +94,30 @@
   }
 }
 
+@media all and (min-width: 480px) and (max-width: 1024px) {
+  .about {
+    padding: 0 1rem;
+    min-height: 800px;
+    &__text {
+      min-height: fit-content;
+      max-width: 50%;
+    }
+  }
+}
+
 @media all and (min-width: 1024px) {
   .about {
     &__text {
       height: 100%;
-      width: 35%;
-      top: 0;
+      width: 65%;
+      top: 100px;
 
       padding-top: 10rem;
+    }
+
+    &__content {
+      padding: 0 20px;
+      max-width: 1024px;
     }
   }
 }

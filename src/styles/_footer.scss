@@ -1,0 +1,70 @@
+@import "vars";
+
+.footer {
+  overflow: clip;
+  height: 35vh;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__links {
+    width: fit-content;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 0.45rem;
+  }
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  &__clouds {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    min-width: 1280px;
+    height: fit-content;
+    z-index: 1;
+  }
+
+  &__contact {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    height: 5vh;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5vh $view-padding-x;
+    background: #000529;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .header {
+    padding: 1rem;
+    height: 5vh;
+    &__home {
+      width: 100%;
+    }
+  }
+
+  .footer {
+    height: 720px;
+    &__contact {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      height: 200px;
+    }
+
+    &__clouds {
+        min-width: 2560px;
+    }
+  }
+}
